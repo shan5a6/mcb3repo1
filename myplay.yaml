@@ -1,0 +1,6 @@
+---
+- name: working with anisble
+  hosts: server1
+  tasks:
+    - name: command
+      command: echo "welcome to github"

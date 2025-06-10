@@ -4,3 +4,4 @@
   tasks:
     - name: command
       command: echo "welcome to github"
+    - name: testing

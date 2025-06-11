@@ -1,10 +1,11 @@
 pipeline {
   agent any 
   stages {
-    stage('welcome note') {
+    stage('working with variables ') {
       steps {
         script {
-          println "welcome to jenkins pipelines"
+          var1=20
+          println "my var1  value is ${var1}"
         }
       }
     }

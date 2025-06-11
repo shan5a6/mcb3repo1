@@ -1,24 +1,17 @@
+def mycode(a,b){
+  sum = a + b 
+  println "welcome to functions & sum is ${sum} "
+}
+
 pipeline {
   agent any 
   stages {
-    stage('working with loops') {
+    stage('welcome note') {
       steps {
         script {
-          for(i=1;i<=5;i++) {
-            println "my i value is ${i}"
-          }
-          mylist1=["devops","azure","aws"]
-          for(item in mylist1) {
-            println "my ele is ${item}"
-          }
-          j=10
-          while(j<=15) {
-            println "my j value is ${j}"
-            j = j + 1 
-          }
+          mycode(10,20)
         }
       }
     }
   }
 }
-

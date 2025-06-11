@@ -1,21 +1,17 @@
 pipeline {
-  agent any
-  parameters {
-    choice choices: ['dev', 'prod'], name: 'ENV'
-  }   
-  environment {
-    JAVA_HOME = "/opt/bin/java"
-  }  
+  agent any 
   stages {
-    stage('working with variables ') {
+    stage('working with conditions') {
       steps {
         script {
-          var1=20
-          println "my var1  value is ${var1}"
-          println "BUILD_NUMBER  is ${BUILD_NUMBER}"
-          println "WORKSPACE is ${WORKSPACE}"
-          println "My selected ENV is ${params.ENV}"
-          println "My JAVA HOME Path is ${env.JAVA_HOME}"
+          a=10
+          b=20
+          if (a > b) {
+            println "a is big ${a}"
+          }
+          else {
+            println "b is big ${b}"
+          }
         }
       }
     }

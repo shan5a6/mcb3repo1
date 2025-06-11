@@ -1,19 +1,24 @@
 pipeline {
   agent any 
   stages {
-    stage('working with conditions') {
+    stage('working with loops') {
       steps {
         script {
-          a=10
-          b=20
-          if (a > b) {
-            println "a is big ${a}"
+          for(i=1;i<=5;i++) {
+            println "my i value is ${i}"
           }
-          else {
-            println "b is big ${b}"
+          mylist1=["devops","azure","aws"]
+          for(item in mylist1) {
+            println "my ele is ${item}"
+          }
+          j=10
+          while(j<=15) {
+            println "my j value is ${j}"
+            j = j + 1 
           }
         }
       }
     }
   }
 }
+

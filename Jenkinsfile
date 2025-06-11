@@ -1,16 +1,15 @@
-def mycode(a=20,b=30){
-  sum = a + b 
-  println "welcome to functions & sum is ${sum} "
-}
-
 pipeline {
   agent any 
   stages {
     stage('welcome note') {
       steps {
         script {
-          mycode()
-          mycode(100,200)
+          File file = new File("/opt/mydata.txt")
+          def lines = file.readLines()
+          println "Lines\n ${lines}"
+          for (line in lines) {
+            println "myline is ${line}"
+          }
         }
       }
     }

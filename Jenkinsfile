@@ -1,4 +1,4 @@
-def mycode(a,b){
+def mycode(a=20,b=30){
   sum = a + b 
   println "welcome to functions & sum is ${sum} "
 }
@@ -9,7 +9,8 @@ pipeline {
     stage('welcome note') {
       steps {
         script {
-          mycode(10,20)
+          mycode()
+          mycode(100,200)
         }
       }
     }
